@@ -1,0 +1,26 @@
+Diseño de Base de Datos
+
+Sistema Experto para Prediagnóstico del Sindrome Metabólico
+
+pacientes
+	idpacientes
+	nombre
+	edad
+	sexo
+	peso
+	talla
+
+usuarios
+	idusuario
+	login
+	password
+	cedula_prof
+
+prediagnostico
+	idprediagnostico
+	fecha
+	resultado
+	---
+	idpacientes
+	idusuario
+
