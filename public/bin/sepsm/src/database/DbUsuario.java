@@ -2,7 +2,7 @@
 
 * */
 
-package sepsm.basededatos;
+package database;
 import java.sql.*;
 
 public class DbUsuario {
