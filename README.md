@@ -1,7 +1,7 @@
 SEPSM
 =====
 
-Sistema Experto para Prediagnóstico del Sindrome Metabólico
+Sistema Experto para Pre Diagnóstico del Síndrome Metabólico
 
 ## The content
 
