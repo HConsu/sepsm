@@ -29,5 +29,23 @@ CREATE TABLE `usuarios` (
 -- ----------------------------
 -- Records of usuarios
 -- ----------------------------
-INSERT INTO `usuarios` VALUES ('1', 'david', '232943');
-INSERT INTO `usuarios` VALUES ('2', 'adal', '1234');
+INSERT INTO `usuarios` VALUES ('1', 'david@sepsm', 'david');
+INSERT INTO `usuarios` VALUES ('2', 'adal@sepsm', 'adal');
+INSERT INTO `usuarios` VALUES ('3', 'virgilio@sepsm', 'virgilio');
+
+-- ----------------------------
+-- Table structure for pacientes
+-- ----------------------------
+DROP TABLE IF EXISTS `paciente`;
+CREATE TABLE `pacientes` (
+  `idpaciente` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`idpaciente`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of pacientes
+-- ----------------------------
+INSERT INTO `usuarios` VALUES ('1', 'pedro');
+INSERT INTO `usuarios` VALUES ('2', 'juan');
+INSERT INTO `usuarios` VALUES ('3', 'luis');
