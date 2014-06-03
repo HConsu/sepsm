@@ -2,13 +2,13 @@
 
 * */
 
-package sepsm;
+package acceso;
 
+import database.DbUsuario;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import sepsm.basededatos.*;
 
 public class frmLogin extends JFrame {
 	private static final long serialVersionUID = 1L;

@@ -2,10 +2,10 @@
 
 * */
 
-package sepsm;
+package acceso;
 import javax.swing.*;
 
-public class EjemploLogin {
+public class Login {
 	public static void main( String args[] )
 	{
 	    JFrame.setDefaultLookAndFeelDecorated(true);
