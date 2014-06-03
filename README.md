@@ -16,9 +16,11 @@ Sistema Experto para Prediagnóstico del Sindrome Metabólico
 
 
 #### Just For ADL
-Location
+Main dir location
+
 ```
-Main dir:
 :/Documents/UAEH/inteligenciaArtificial/sepsm
 ```
+## License
 
+Code Licensed under [MIT](http://www.opensource.org/licenses/mit-license.php). Totally free for private or commercial projects.
