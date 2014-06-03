@@ -5,26 +5,32 @@ Sistema Experto para Prediagnóstico del Sindrome Metabólico
 
 ## The content
 
-Within the download you'll find the following directories and files. You'll see something like this:
+Within the download you'll find the following directories. You'll see something like this:
 
 ```
-│   LICENSE
-│   README.md
-│   
-└───public
-    │   Project's content goes here
-    │   
-    ├───bin
-    │       Source code & executable goes here
-    │       
-    └───docs
-        │   Documentation goes here
-        │   Proyecto Inteligencia Artificial.docx
-        │   
-        └───res
-            │   Resources goes here
-            │   
-            └───fonts
+├───public
+│   ├───bin
+│   │   └───sepsm
+│   │       ├───img
+│   │       ├───nbproject
+│   │       └───src
+│   │           └───sepsm
+│   │               └───basededatos
+│   └───docs
+│       └───res
+│           └───fonts
+├───req
+└───test
+    └───RULETest
+        ├───build
+        │   └───classes
+        │       └───ruletest
+        ├───dist
+        │   └───lib
+        ├───nbproject
+        │   └───private
+        └───src
+            └───ruletest
 ```
 
 ## Authors

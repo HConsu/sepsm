@@ -1,0 +1,18 @@
+Menú de aplicación
+
+Menú de aplicación propuesto:
+
+Archivo
+	Salir
+Pacientes
+	Nuevo
+	Lista
+Médico
+	Nuevo
+	Lista
+Diagnósticos
+	Nuevo
+	Lista
+Ayuda
+	Ayuda
+	Acerca de
