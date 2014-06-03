@@ -8,7 +8,17 @@ Sistema Experto para Prediagnóstico del Sindrome Metabólico
 Within the download you'll find the following directories and files. You'll see something like this:
 
 ```
-
+│   LICENSE
+│   README.md
+│   
+└───public
+    │   Project's content goes here
+    │   
+    ├───bin
+    │       Source code & executable goes here
+    │       
+    └───docs
+            Documentation goes here
 ```
 
 ## Authors
