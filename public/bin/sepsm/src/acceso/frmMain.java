@@ -11,6 +11,9 @@ package acceso;
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
+import modulos.NvDiagnostico;
+import modulos.NvMedico;
+import modulos.NvPaciente;
 
 
 public class frmMain extends JFrame {
@@ -80,9 +83,9 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA NUEVO PACIENTE
-                                                    */	
+                                                 NvPaciente paciente=new NvPaciente();
+                                                 paciente.setVisible(true);
+                                                        
                                                 }
 					} 
 			);
@@ -103,7 +106,7 @@ public class frmMain extends JFrame {
 					} 
 			);
                         
-                        /*Nuevo MEDICO.. PERTENECE A OPCION DE MENU Pacientes*/		
+                        /*Nuevo MEDICO.. PERTENECE A OPCION DE MENU MEDICO*/		
 			JMenuItem itemNvMedico = new JMenuItem("Nuevo");
 			itemNvMedico.setMnemonic('N');
                         /*Se agrega el item NUEVO a MEDICO*/
@@ -113,9 +116,8 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA NUEVO MEDICO
-                                                    */	
+						 NvMedico medico =new NvMedico();
+                                                 medico.setVisible(true);
                                                 }
 					} 
 			);
@@ -146,9 +148,8 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA NUEVO DIAGNOSTICO
-                                                    */	
+						 NvDiagnostico diagnostico = new NvDiagnostico();
+                                                
                                                 }
 					} 
 			);
