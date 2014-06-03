@@ -18,7 +18,13 @@ Within the download you'll find the following directories and files. You'll see 
     │       Source code & executable goes here
     │       
     └───docs
-            Documentation goes here
+        │   Documentation goes here
+        │   Proyecto Inteligencia Artificial.docx
+        │   
+        └───res
+            │   Resources goes here
+            │   
+            └───fonts
 ```
 
 ## Authors
