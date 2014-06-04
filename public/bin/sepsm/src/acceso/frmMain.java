@@ -18,7 +18,7 @@ import net.sf.jasperreports.engine.util.*;
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
-import modulos.NvDiagnostico;
+import sistema_de_diagnostico.NvDiagnostico;
 import modulos.NvMedico;
 import modulos.NvPaciente;
 
