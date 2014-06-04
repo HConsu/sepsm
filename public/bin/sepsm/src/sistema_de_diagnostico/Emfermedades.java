@@ -10,7 +10,7 @@ public class Emfermedades extends Enfermedad {
 
     public String enfermedad (String g){
         if (g.equals("gripe")){
-            setNombre("  UD TIENE GRIPOE \n");
+            setNombre("  UD TIENE GRIPE \n");
             setTratamiento("  La principal forma de evitar que se contagie \n"
                     + "la gripe es aplicarse una vacuna anual. Si tiene gripe,\n "
                     + "el médico puede recetarle una medicina que lo ayude a combatir\n"

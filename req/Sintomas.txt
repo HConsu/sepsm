@@ -1,0 +1,25 @@
+Síntomas
+==================================
+
+		Tos seca
+Tos->	Tos con flema
+		Tos cosntante y fuerte
+
+		Dolor de cabeza
+		Dolor de garganta
+Dolor->	Dolor en el pecho
+		Dolor en el cuerpo
+
+Dificultades ->	Dificultades al respirar
+				Insuficiencia cardiaca
+
+
+Temperatura ->	Fiebre
+			Escalofríos
+			Sudores nocturnos
+
+Otros	->	Dilatación del torax
+			Vomito y diarrea
+
+Peso		Perdida del apetito
+			Bajar de peso

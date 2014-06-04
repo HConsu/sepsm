@@ -10,7 +10,7 @@ import Rule.*;
  * @author Adalberto
  */
 /**
- *
+ *  A continuación se definen las reglas
  * 
  */
 public class BaseReglas {
