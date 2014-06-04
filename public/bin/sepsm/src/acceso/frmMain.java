@@ -97,7 +97,9 @@ public class frmMain extends JFrame {
 						{
                                                  NvPaciente paciente=new NvPaciente();
                                                  paciente.setVisible(true);
-                                                        
+                                                
+                                                
+                                 
                                                 }
 					} 
 			);
@@ -112,18 +114,12 @@ public class frmMain extends JFrame {
 						public void actionPerformed(ActionEvent evento)
 						{
                                                       try {
- 
-            JasperReport reporte = JasperCompileManager.compileReport("rptPaciente.jrxml");
- 
-            JasperPrint print = JasperFillManager.fillReport(reporte, new HashMap(), con.getConnection());
- 
-            JasperViewer.viewReport(print, false);
- 
-        } catch (JRException jRException) {
- 
-            System.out.println(jRException.getMessage());
- 
-        }
+                                                        JasperReport reporte = JasperCompileManager.compileReport("rptPaciente.jrxml");
+                                                        JasperPrint print = JasperFillManager.fillReport(reporte, new HashMap(), con.getConnection());
+                                                        JasperViewer.viewReport(print, false);
+                                                        } catch (JRException jRException) {
+                                                            System.out.println(jRException.getMessage());
+                                                          }
                  
                                                     
 						  }
@@ -155,9 +151,13 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA LISTA DE MEDICO
-                                                    */	
+                                                   try {
+                                                        JasperReport reporte = JasperCompileManager.compileReport("rptMedicos.jrxml");
+                                                        JasperPrint print = JasperFillManager.fillReport(reporte, new HashMap(), con.getConnection());
+                                                        JasperViewer.viewReport(print, false);
+                                                        } catch (JRException jRException) {
+                                                            System.out.println(jRException.getMessage());
+                                                          }
                                                 }
 					} 
 			);
@@ -173,7 +173,7 @@ public class frmMain extends JFrame {
 						public void actionPerformed(ActionEvent evento)
 						{
 						 NvDiagnostico diagnostico = new NvDiagnostico();
-                                                
+                                                diagnostico.setVisible(true);
                                                 }
 					} 
 			);
@@ -187,9 +187,13 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA LISTA DE DIAGNOSTICO
-                                                    */	
+						    try {
+                                                        JasperReport reporte = JasperCompileManager.compileReport("rptDiagnostico.jrxml");
+                                                        JasperPrint print = JasperFillManager.fillReport(reporte, new HashMap(), con.getConnection());
+                                                        JasperViewer.viewReport(print, false);
+                                                        } catch (JRException jRException) {
+                                                            System.out.println(jRException.getMessage());
+                                                          }
                                                 }
 					} 
 			);

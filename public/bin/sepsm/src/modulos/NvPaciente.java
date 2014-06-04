@@ -30,7 +30,7 @@ public class NvPaciente extends javax.swing.JFrame {
 
         jToggleButton1 = new javax.swing.JToggleButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jToggleButton1.setText("jToggleButton1");
 
