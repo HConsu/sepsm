@@ -3,9 +3,17 @@
 * */
 
 package acceso;
+/*LIBRERIAS NECESARIAS*/
 
+
+
+//**************************//
+import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
+import modulos.NvDiagnostico;
+import modulos.NvMedico;
+import modulos.NvPaciente;
 
 
 public class frmMain extends JFrame {
@@ -14,14 +22,25 @@ public class frmMain extends JFrame {
 	public frmMain()
 	{
 		super("SEPSM 1.0");
+                
+                /*MANDAR LLAMAR LA IMAGEN */
+                ImageIcon imagen = new ImageIcon("img/medico.png");
+                JLabel etiqueta = new JLabel(imagen);
+		//AGREGAMOS LA ETIQUETA QUE CONTIENE LA IMAGEN AL FRAME
+		getContentPane().add(etiqueta);
+		
+		//ESTABLECEMOS EL TAMAÑO DEL FRAME
+		this.setSize(500, 400);
+               
+                
+                
 	}
 	
        
  
+
         
-        
-        
-        
+
         
 	public void mostrarForm(boolean mostrar){
 		if (mostrar == true){
@@ -64,9 +83,9 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA NUEVO PACIENTE
-                                                    */	
+                                                 NvPaciente paciente=new NvPaciente();
+                                                 paciente.setVisible(true);
+                                                        
                                                 }
 					} 
 			);
@@ -87,7 +106,7 @@ public class frmMain extends JFrame {
 					} 
 			);
                         
-                        /*Nuevo MEDICO.. PERTENECE A OPCION DE MENU Pacientes*/		
+                        /*Nuevo MEDICO.. PERTENECE A OPCION DE MENU MEDICO*/		
 			JMenuItem itemNvMedico = new JMenuItem("Nuevo");
 			itemNvMedico.setMnemonic('N');
                         /*Se agrega el item NUEVO a MEDICO*/
@@ -97,9 +116,8 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA NUEVO MEDICO
-                                                    */	
+						 NvMedico medico =new NvMedico();
+                                                 medico.setVisible(true);
                                                 }
 					} 
 			);
@@ -130,9 +148,8 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA NUEVO DIAGNOSTICO
-                                                    */	
+						 NvDiagnostico diagnostico = new NvDiagnostico();
+                                                
                                                 }
 					} 
 			);
@@ -201,6 +218,8 @@ public class frmMain extends JFrame {
                         barramenu.add(ayuda);
                         setJMenuBar(barramenu);
 			setSize(500, 400);
+                       setResizable(false);
+                  getContentPane().setBackground(new Color (52,152,221));
 			setLocationRelativeTo(this.getParent());
 			setVisible(mostrar);
 			setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -208,6 +227,8 @@ public class frmMain extends JFrame {
                 
                 
 	}
+        
+        
         
 }
 

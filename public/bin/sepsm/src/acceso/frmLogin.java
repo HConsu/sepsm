@@ -71,8 +71,8 @@ public class frmLogin extends JFrame {
 						if ((x_user != "") && (x_pass != ""))
 						{
 							JOptionPane.showMessageDialog( frmLogin.this,
-									"Bienvenido al sistema usuario: " + x_user/*", con id: " + x_iduser*/,
-									"Acerca de", JOptionPane.INFORMATION_MESSAGE );
+									"Bienvenido Médico: " + x_user/*", con id: " + x_iduser*/,
+									"Acceso", JOptionPane.INFORMATION_MESSAGE );
 							principal.mostrarForm(true);
 							principal.setLocationRelativeTo(principal.getParent());
 							dispose();
@@ -81,7 +81,7 @@ public class frmLogin extends JFrame {
 					catch(Exception e){
 						JOptionPane.showMessageDialog( frmLogin.this,
 								"Usuario o contrase�a incorrecto",
-								"Acerca de", JOptionPane.ERROR_MESSAGE );
+								"Acceso", JOptionPane.ERROR_MESSAGE );
 					}
 				}
 			}
