@@ -4,6 +4,13 @@
 
 package acceso;
 /*LIBRERIAS NECESARIAS*/
+import database.DbConnection;
+import java.net.URL;
+import java.util.HashMap;
+import java.sql.*;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.view.*;
+import net.sf.jasperreports.engine.util.*;
 
 
 
@@ -16,11 +23,15 @@ import modulos.NvMedico;
 import modulos.NvPaciente;
 
 
+
 public class frmMain extends JFrame {
 	private static final long serialVersionUID = 1L;
+        
 	private JMenuBar barramenu;
+          private database.conexion con = new database.conexion();   
 	public frmMain()
 	{
+            
 		super("SEPSM 1.0");
                 
                 /*MANDAR LLAMAR LA IMAGEN */
@@ -37,12 +48,13 @@ public class frmMain extends JFrame {
 	}
 	
        
- 
 
+   
         
 
         
 	public void mostrarForm(boolean mostrar){
+            
 		if (mostrar == true){
 			barramenu = new JMenuBar(); 
 			JMenu archivo = new JMenu("Archivo");
@@ -85,7 +97,9 @@ public class frmMain extends JFrame {
 						{
                                                  NvPaciente paciente=new NvPaciente();
                                                  paciente.setVisible(true);
-                                                        
+                                                
+                                                
+                                 
                                                 }
 					} 
 			);
@@ -99,10 +113,16 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA LISTA DE PACIENTES
-                                                    */	
-                                                }
+                                                      try {
+                                                        JasperReport reporte = JasperCompileManager.compileReport("rptPaciente.jrxml");
+                                                        JasperPrint print = JasperFillManager.fillReport(reporte, new HashMap(), con.getConnection());
+                                                        JasperViewer.viewReport(print, false);
+                                                        } catch (JRException jRException) {
+                                                            System.out.println(jRException.getMessage());
+                                                          }
+                 
+                                                    
+						  }
 					} 
 			);
                         
@@ -131,9 +151,13 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA LISTA DE MEDICO
-                                                    */	
+                                                   try {
+                                                        JasperReport reporte = JasperCompileManager.compileReport("rptMedicos.jrxml");
+                                                        JasperPrint print = JasperFillManager.fillReport(reporte, new HashMap(), con.getConnection());
+                                                        JasperViewer.viewReport(print, false);
+                                                        } catch (JRException jRException) {
+                                                            System.out.println(jRException.getMessage());
+                                                          }
                                                 }
 					} 
 			);
@@ -149,7 +173,7 @@ public class frmMain extends JFrame {
 						public void actionPerformed(ActionEvent evento)
 						{
 						 NvDiagnostico diagnostico = new NvDiagnostico();
-                                                
+                                                diagnostico.setVisible(true);
                                                 }
 					} 
 			);
@@ -163,9 +187,13 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						/*
-                                                    AGREGAR FUNCION PARA LISTA DE DIAGNOSTICO
-                                                    */	
+						    try {
+                                                        JasperReport reporte = JasperCompileManager.compileReport("rptDiagnostico.jrxml");
+                                                        JasperPrint print = JasperFillManager.fillReport(reporte, new HashMap(), con.getConnection());
+                                                        JasperViewer.viewReport(print, false);
+                                                        } catch (JRException jRException) {
+                                                            System.out.println(jRException.getMessage());
+                                                          }
                                                 }
 					} 
 			);
