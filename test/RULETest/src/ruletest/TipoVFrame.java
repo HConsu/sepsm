@@ -43,7 +43,8 @@ public class TipoVFrame extends javax.swing.JInternalFrame
         jCBNumR = new javax.swing.JComboBox();
 
         setClosable(true);
-        setTitle("Tipo de Vehiculo");
+        setTitle("Preguntas");
+        setToolTipText("");
 
         jLabel1.setText("Numero de Ruedas");
 
@@ -81,6 +82,11 @@ public class TipoVFrame extends javax.swing.JInternalFrame
         });
 
         jCBNumR.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2", "3", "4" }));
+        jCBNumR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCBNumRActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -124,7 +130,7 @@ public class TipoVFrame extends javax.swing.JInternalFrame
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BAcep)
                     .addComponent(BCancel))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();
@@ -169,6 +175,11 @@ public class TipoVFrame extends javax.swing.JInternalFrame
         }
         
     }//GEN-LAST:event_BAcepActionPerformed
+
+    private void jCBNumRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBNumRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBNumRActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BAcep;
     private javax.swing.JButton BCancel;

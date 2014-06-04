@@ -41,12 +41,9 @@ public class Principal extends javax.swing.JFrame
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ejemplo de Rule <<Vehiculos>>");
-
-        jDP1.setBackground(java.awt.Color.white);
 
         jMenu1.setText("Archivo");
 
@@ -61,18 +58,15 @@ public class Principal extends javax.swing.JFrame
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Encadenamiento");
+        jMenu2.setText("Pre diagnóstico");
 
-        jMenuItem2.setText("Adelante");
+        jMenuItem2.setText("Nuevo");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
             }
         });
         jMenu2.add(jMenuItem2);
-
-        jMenuItem3.setText("Atras");
-        jMenu2.add(jMenuItem3);
 
         jMenuBar1.add(jMenu2);
 
@@ -171,6 +165,5 @@ public class Principal extends javax.swing.JFrame
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     // End of variables declaration//GEN-END:variables
 }
