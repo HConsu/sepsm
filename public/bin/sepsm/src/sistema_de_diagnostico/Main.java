@@ -3,7 +3,7 @@ package sistema_de_diagnostico;
 
 /**
  *
- * @author David
+ * Función principal de aplicación
  */
 public class Main {
 
