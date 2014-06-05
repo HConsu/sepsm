@@ -248,7 +248,7 @@ public class frmMain extends JFrame {
                         setJMenuBar(barramenu);
 			setSize(500, 400);
                        setResizable(false);
-                  getContentPane().setBackground(new Color (52,152,221));
+                  getContentPane().setBackground(new Color (225,0,11));
 			setLocationRelativeTo(this.getParent());
 			setVisible(mostrar);
 			setDefaultCloseOperation(EXIT_ON_CLOSE);

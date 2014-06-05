@@ -2,16 +2,18 @@
 package modulos;
 
 import com.mysql.jdbc.PreparedStatement;
+import java.awt.Color;
+import java.awt.Container;
 import java.sql.*;
-
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class Insertar extends javax.swing.JFrame {
         static int z, ide; 
         String b,c;
-        static Connection con;
-        static database.conexion cn = new database.conexion();
+        
+          private database.conexion conn = new database.conexion();   
+          
         static Statement s;
         static ResultSet rs;
     
@@ -27,8 +29,8 @@ public class Insertar extends javax.swing.JFrame {
       
     public void autoincrementar() {
         try {
-            
-            s = con.createStatement();
+       
+            s = conn.getConnection().createStatement();
             ResultSet rs = s.executeQuery("select MAX(idpacientes) as maximo FROM pacientes");
 
             while (rs.next()) {
@@ -44,13 +46,13 @@ public class Insertar extends javax.swing.JFrame {
 
     }
     
-    public static void insertar(int ide,String nombre, String edad, String sexo, String peso, String talla)
+    public void insertar(int ide,String nombre, String edad, String sexo, String peso, String talla)
     {
       try
       {
  
-          s=con.createStatement();
-          s.execute("INSERT INTO pacientes values("+ide+", '"+nombre +"', '"+edad+"','"+sexo+"','"+peso+"','"+talla+"')");           
+          s=conn.getConnection().createStatement();
+          s.execute("INSERT INTO pacientes values("+ide+", '"+nombre +"', "+edad+",'"+sexo+"',"+peso+","+talla+")");           
               
         }
       
@@ -81,21 +83,24 @@ public class Insertar extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Nuevo Paciente");
+        setBackground(new java.awt.Color(255, 51, 51));
         setLocationByPlatform(true);
         setMaximizedBounds(new java.awt.Rectangle(1000, 1000, 0, 0));
-        setMinimumSize(new java.awt.Dimension(700, 500));
+        setMinimumSize(new java.awt.Dimension(450, 350));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Nombre:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 160, 60, 17);
+        jLabel2.setBounds(40, 90, 60, 17);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Edad:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(160, 200, 60, 17);
+        jLabel3.setBounds(40, 130, 60, 17);
 
         jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -103,7 +108,7 @@ public class Insertar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(230, 190, 310, 30);
+        jTextField2.setBounds(90, 130, 90, 30);
 
         jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -111,12 +116,12 @@ public class Insertar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(230, 230, 310, 30);
+        jTextField3.setBounds(250, 130, 160, 30);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("NUEVO PACIENTE");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(240, 70, 290, 29);
+        jLabel4.setBounds(130, 10, 220, 29);
 
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 51));
@@ -127,21 +132,21 @@ public class Insertar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(230, 370, 140, 50);
+        jButton1.setBounds(90, 240, 140, 50);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Sexo:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 240, 70, 20);
+        jLabel1.setBounds(190, 130, 70, 20);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(230, 150, 310, 30);
+        jTextField1.setBounds(100, 90, 310, 30);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Talla:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(160, 320, 60, 17);
+        jLabel5.setBounds(190, 170, 60, 17);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(230, 270, 310, 30);
+        jTextField4.setBounds(90, 170, 90, 30);
 
         jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 51));
@@ -152,14 +157,14 @@ public class Insertar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(380, 370, 120, 50);
+        jButton2.setBounds(260, 240, 120, 50);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(230, 310, 310, 30);
+        jTextField5.setBounds(250, 170, 160, 30);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Peso:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(160, 277, 60, 17);
+        jLabel7.setBounds(40, 170, 60, 17);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -179,7 +184,7 @@ public class Insertar extends javax.swing.JFrame {
         jTextField2.setText("");
         jTextField3.setText("");
         jTextField4.setText("");
-        
+        jTextField5.setText("");
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -198,7 +203,9 @@ public class Insertar extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    
+  
+   
+     
     public static void main(String args[]) {
         
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -236,6 +243,9 @@ public class Insertar extends javax.swing.JFrame {
         });
         
     }
+
+   
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
