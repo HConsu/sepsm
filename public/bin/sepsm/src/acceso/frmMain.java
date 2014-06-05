@@ -18,6 +18,7 @@ import net.sf.jasperreports.engine.util.*;
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
+import modulos.Insertar;
 import sistema_de_diagnostico.NvDiagnostico;
 import modulos.NvMedico;
 import modulos.NvPaciente;
@@ -95,7 +96,7 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-                                                 NvPaciente paciente=new NvPaciente();
+                                                    Insertar paciente=new Insertar();
                                                  paciente.setVisible(true);
                                                 
                                                 

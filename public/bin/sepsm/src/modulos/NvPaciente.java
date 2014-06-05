@@ -6,12 +6,17 @@
 
 package modulos;
 
+import com.mysql.jdbc.Statement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /**
  *
  * @author David Zahid
  */
 public class NvPaciente extends javax.swing.JFrame {
-
+     private database.conexion con = new database.conexion();   
     /**
      * Creates new form NvPaciente
      */
@@ -19,6 +24,10 @@ public class NvPaciente extends javax.swing.JFrame {
         initComponents();
     }
 
+  
+    
+   
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -45,6 +54,11 @@ public class NvPaciente extends javax.swing.JFrame {
         setResizable(false);
 
         btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Nombre del Paciente:");
 
@@ -117,6 +131,19 @@ public class NvPaciente extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+                  
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        // TODO add your handling code here:
+        		
+             
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     /**
      * @param args the command line arguments
