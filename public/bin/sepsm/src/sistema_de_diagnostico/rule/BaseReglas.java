@@ -59,14 +59,25 @@ public class BaseReglas {
     
     public String getTipoDiabetes(String iSexo, String iNivelGlucemia, String iEdad,
             String iEmbarazada) {
-        staterBR();
-        
+ 
+         
+        try {
+             staterBR();
+                 
+       embarazada.setValue(iEmbarazada);
         sexo.setValue(iSexo);
         nivelGlucemia.setValue(iNivelGlucemia);
         edad.setValue(iEdad);
         br.forwardChain();
         tipoDiabetes = rTipoDiabetes.getValue();
         return tipoDiabetes;
+
+        } catch (Exception e) {
+            System.out.println("sexo:"+iSexo+"\nNivel Glucemina"+iNivelGlucemia+"\n Edad"+iEdad+"Embarazada"+iEmbarazada);
+                System.out.println("error ");
+        }
+     
+return tipoDiabetes;
     }
     /*
      * Result here

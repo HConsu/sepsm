@@ -417,6 +417,9 @@ public class NvDiagnostico extends javax.swing.JFrame {
             s=objeto.sumatoria(matriz);
             jTextArea1.setText(s);
         // TODO add your handling code here:
+            
+            
+            
     }//GEN-LAST:event_buttonRound1ActionPerformed
 
     private void buttonRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound2ActionPerformed

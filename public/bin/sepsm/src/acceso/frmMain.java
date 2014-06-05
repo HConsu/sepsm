@@ -163,6 +163,23 @@ public class frmMain extends JFrame {
 					} 
 			);
                         
+                        
+                        
+                            /*Nuevo DIAGNOSTICO.. PERTENECE A OPCION DE MENU DIAGNOSTICO*/		
+			JMenuItem itemNvDiagnosticoE2 = new JMenuItem("Enfermedades Comunes");
+			
+                        /*Se agrega el item NUEVO a DIAGNOSTICO*/
+			diagnostico.add(itemNvDiagnosticoE2);
+			
+                        itemNvDiagnosticoE2.addActionListener(
+					new ActionListener() {
+						public void actionPerformed(ActionEvent evento)
+						{
+						 NvDiagnostico diagnostico = new NvDiagnostico();
+                                                diagnostico.setVisible(true);
+                                                }
+					} 
+			);
                         /*Nuevo DIAGNOSTICO.. PERTENECE A OPCION DE MENU DIAGNOSTICO*/		
 			JMenuItem itemNvDiagnosticoE1 = new JMenuItem("Pre Diagnóstico Diabetes");
 			
@@ -179,23 +196,6 @@ public class frmMain extends JFrame {
                                                 }
 					} 
 			);
-                        
-                            /*Nuevo DIAGNOSTICO.. PERTENECE A OPCION DE MENU DIAGNOSTICO*/		
-			JMenuItem itemNvDiagnosticoE2 = new JMenuItem("Pre Diagnostico Enfermedades Respiratorias");
-			
-                        /*Se agrega el item NUEVO a DIAGNOSTICO*/
-			diagnostico.add(itemNvDiagnosticoE2);
-			
-                        itemNvDiagnosticoE2.addActionListener(
-					new ActionListener() {
-						public void actionPerformed(ActionEvent evento)
-						{
-						 NvDiagnostico diagnostico = new NvDiagnostico();
-                                                diagnostico.setVisible(true);
-                                                }
-					} 
-			);
-                        
                         
                         
                         

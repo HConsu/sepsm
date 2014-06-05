@@ -4,9 +4,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/David%20Zahid/Documents/GitHub/sepsm/test/RULETest/src/ruletest/Principal.java</file>
-            <file>file:/C:/Users/David%20Zahid/Documents/GitHub/sepsm/test/RULETest/src/ruletest/CyclicFrame.java</file>
-            <file>file:/C:/Users/David%20Zahid/Documents/GitHub/sepsm/test/RULETest/src/ruletest/BaseReglas.java</file>
+            <file>file:/C:/Users/David%20Zahid/Documents/GitHub/sepsm/test/RULETest/src/sistema_de_diagnostico/rule/AutoFrame.java</file>
+            <file>file:/C:/Users/David%20Zahid/Documents/GitHub/sepsm/test/RULETest/src/sistema_de_diagnostico/rule/CyclicFrame.java</file>
+            <file>file:/C:/Users/David%20Zahid/Documents/GitHub/sepsm/test/RULETest/src/sistema_de_diagnostico/rule/TipoVFrame.java</file>
+            <file>file:/C:/Users/David%20Zahid/Documents/GitHub/sepsm/test/RULETest/src/sistema_de_diagnostico/rule/BaseReglas.java</file>
+            <file>file:/C:/Users/David%20Zahid/Documents/GitHub/sepsm/test/RULETest/src/sistema_de_diagnostico/rule/Principal.java</file>
         </group>
     </open-files>
 </project-private>

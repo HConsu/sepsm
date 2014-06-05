@@ -15,7 +15,7 @@ public class TipoVFrame extends javax.swing.JInternalFrame
 {
 
     Principal objP;
-    String fSexo, fGlucemia, fEdad, fEmbarazada;
+    String fSexo="femenina", fGlucemia="126", fEdad="40", fEmbarazada="no";
     String tipoV="";
     /*
     String Numr, Motor;
@@ -176,7 +176,7 @@ public class TipoVFrame extends javax.swing.JInternalFrame
         // Embarazada o no
         if (jRBMotorSi.isSelected())
         {
-            jRBMotorNo.setSelected(false);
+            jRBMotorNo.setSelected(true);
             fEmbarazada = "si";
         }
 }//GEN-LAST:event_jRBMotorSiActionPerformed
@@ -198,12 +198,19 @@ public class TipoVFrame extends javax.swing.JInternalFrame
     private void BAcepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BAcepActionPerformed
         // TODO add your handling code here:
         //Get textboxes
-        fEdad = String.valueOf(jTextField1);
-        fGlucemia = String.valueOf(jTextField2);
+        //fEdad = jTextField1.getText();
+       
+       // fGlucemia = jTextField2.getText();
         //Get from combo
-        fSexo = String.valueOf(jCBNumR.getSelectedItem());
+    
+        Object e = jCBNumR.getSelectedItem(); 
+fSexo = String.valueOf(e);
+  System.out.println ("imprime variables"+fEdad+"glucemina"+fGlucemia +"sexo" +fSexo +"embarazada:"+ fEmbarazada);
+   
         tipoV = objP.objBR.getTipoDiabetes(fSexo, fGlucemia, fEdad, fEmbarazada);
         System.out.println("Resultado ----> " + tipoV);
+                
+        
         if (tipoV==null)
         {
             JOptionPane.showMessageDialog(this, "Verifica las entradas",

@@ -42,7 +42,7 @@ public class Principal extends javax.swing.JFrame
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Pre Diagnóstico");
 
         jMenu1.setText("Archivo");
@@ -87,7 +87,7 @@ public class Principal extends javax.swing.JFrame
     }// </editor-fold>//GEN-END:initComponents
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+       this.setVisible(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     public void lanzaFrame(String TipoV)
