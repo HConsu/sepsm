@@ -1,0 +1,43 @@
+Base de reglas
+
+Sistema Experto para Pre Diagnóstico del Síndrome Metabólico
+
+
+imc = Indice de Masa Corporal
+gc = Glicemia capilar o en suero mg/dL
+dm = Diabetes Mellitus
+
+Captura:
+
+	edad
+	sexo
+	peso
+	talla
+
+Calculos:
+	imc
+
+Reglas:
+
+	(imc<18.50) = "Bajo peso"
+		(imc<16) = "Delgadez severa"
+		((imc>=16)&&(imc<=16.99)) = "Delgadez moderada"
+		((imc>=17)&&(imc<=18.99)) = "Delgadez Leve"
+	((imc>=18.5)&&(imc<=24.99)) = "Normal"
+	((imc>=25)&&(imc<=29.99)) = "Sobrepeso"
+		((imc>=25)&&(imc<=29.99)) = "Preobeso"
+	(imc>=30) = "Obesidad"
+		((imc>=30)&&(imc<=34.99)) = "Leve"
+		((imc>=35)&&(imc<=39.99)) = "Media"
+		(imc>=35) = "Morbida"
+· · ·
+	((gc>=70)&&(gc<=100)) = "Glicemia en ayuno normal"
+	((gc>=101)&&(gc<=125)) = "Glicemia en ayuno alterada"
+	((gc>=126)&&(gc<=200)) = "Diagnóstico provisional de DM"
+	(gc>=200) = "Diagnóstico Diabetes Mellitus tipo 2"
+· · ·
+
+
+
+
+
