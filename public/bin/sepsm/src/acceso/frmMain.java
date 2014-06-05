@@ -18,10 +18,10 @@ import net.sf.jasperreports.engine.util.*;
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
-import modulos.Insertar;
+import modulos.InsertarMedico;
+import modulos.InsertarPaciente;    
 import sistema_de_diagnostico.NvDiagnostico;
-import modulos.NvMedico;
-import modulos.NvPaciente;
+
 
 
 
@@ -96,7 +96,7 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-                                                    Insertar paciente=new Insertar();
+                                            InsertarPaciente paciente=new InsertarPaciente();
                                                  paciente.setVisible(true);
                                                 
                                                 
@@ -137,7 +137,7 @@ public class frmMain extends JFrame {
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
-						 NvMedico medico =new NvMedico();
+						InsertarMedico medico =new InsertarMedico();
                                                  medico.setVisible(true);
                                                 }
 					} 
@@ -164,12 +164,29 @@ public class frmMain extends JFrame {
 			);
                         
                         /*Nuevo DIAGNOSTICO.. PERTENECE A OPCION DE MENU DIAGNOSTICO*/		
-			JMenuItem itemNvDiagnostico = new JMenuItem("Nuevo");
-			itemNvDiagnostico.setMnemonic('N');
-                        /*Se agrega el item NUEVO a DIAGNOSTICO*/
-			diagnostico.add(itemNvDiagnostico);
+			JMenuItem itemNvDiagnosticoE1 = new JMenuItem("Pre Diagnóstico Diabetes");
 			
-                        itemNvDiagnostico.addActionListener(
+                        /*Se agrega el item NUEVO a DIAGNOSTICO*/
+			diagnostico.add(itemNvDiagnosticoE1);
+			
+                        itemNvDiagnosticoE1.addActionListener(
+					new ActionListener() {
+						public void actionPerformed(ActionEvent evento)
+						{
+                                                   sistema_de_diagnostico.rule.Principal diagnosticodia = new sistema_de_diagnostico.rule.Principal();
+                                                   diagnosticodia.setVisible(true);
+					
+                                                }
+					} 
+			);
+                        
+                            /*Nuevo DIAGNOSTICO.. PERTENECE A OPCION DE MENU DIAGNOSTICO*/		
+			JMenuItem itemNvDiagnosticoE2 = new JMenuItem("Pre Diagnostico Enfermedades Respiratorias");
+			
+                        /*Se agrega el item NUEVO a DIAGNOSTICO*/
+			diagnostico.add(itemNvDiagnosticoE2);
+			
+                        itemNvDiagnosticoE2.addActionListener(
 					new ActionListener() {
 						public void actionPerformed(ActionEvent evento)
 						{
@@ -178,6 +195,11 @@ public class frmMain extends JFrame {
                                                 }
 					} 
 			);
+                        
+                        
+                        
+                        
+                        
                         /*Lista DIAGNOSTICO.. PERTENECE A OPCION DE MENU DIAGNOSTICO*/		
 			JMenuItem itemLstDiagnostico = new JMenuItem("Lista");
 			itemLstDiagnostico.setMnemonic('L');
@@ -233,14 +255,7 @@ public class frmMain extends JFrame {
 						}
 					} 
 			);
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-			barramenu.add(archivo);  
+    			barramenu.add(archivo);  
                         barramenu.add(paciente);
                         barramenu.add(medico);
                         barramenu.add(diagnostico);

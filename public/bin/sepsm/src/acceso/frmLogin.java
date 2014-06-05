@@ -24,7 +24,7 @@ public class frmLogin extends JFrame {
 		cuadricula1 = new GridLayout(3, 3, 10, 10);
 		
 		lblusuario = new JLabel("Usuario:");
-		lblpassword = new JLabel("Clave:");
+		lblpassword = new JLabel("Contraseña:");
 		
 		txtusuario = new JTextField(10);
 		txtpassword = new JPasswordField(10);
