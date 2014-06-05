@@ -1,0 +1,34 @@
+Diseño de Base de Datos
+
+Sistema Experto para Prediagnóstico del Sindrome Metabólico
+
+pacientes
+	idpacientes
+	nombre
+	edad
+	sexo
+	peso
+	talla
+	familiares con diabetes (padres, hermanos y abuelos)
+	Si es mujer cuanto pesaron sus hijos al nacer
+	Si ha sufrido sobrepeso toda la vida
+	quimica sanguínea
+	glucosa en sangre
+	trigliceridos
+	colesterolperfil lipidico
+	hdl
+
+
+usuarios
+	idusuario
+	login
+	password
+	cedula_prof
+
+prediagnostico
+	idprediagnostico
+	fecha
+	resultado
+	---
+	idpacientes
+	idusuario
